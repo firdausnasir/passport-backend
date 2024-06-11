@@ -57,6 +57,6 @@ class AuthenticatedSessionController extends Controller
     {
         Auth::guard('web')->logout();
 
-        return redirect()->route('passport.authorizations.authorize', $request->all());
+        return redirect()->route('oauth.login', $request->all());
     }
 }
